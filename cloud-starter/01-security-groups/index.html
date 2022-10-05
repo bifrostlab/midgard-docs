@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Security Groups - Midgard Lab</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Security Groups";
+        var mkdocs_page_input_path = "cloud-starter/01-security-groups.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Midgard Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to Midgard</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../access-the-lab/">Accessing the Lab</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../intro-to-cloud/">Introduction to Cloud Computing</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Cloud starter</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Security Groups</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#inspecting-your-security-groups">Inspecting your Security Groups</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-security-group">Creating a Security Group</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-ssh-access">Adding ssh Access</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#applying-security-groups">Applying Security Groups</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applying-a-security-group-at-launch">Applying a Security Group at Launch</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#applying-a-security-group-on-a-running-instance">Applying a security group on a running instance</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-keypairs/">Key Pairs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../03-launching-vms/">Launching Instances</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Midgard Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Cloud starter &raquo;</li>
+      <li>Security Groups</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="security-groups">Security Groups</h1>
+<p>Security Groups are Midgard's way of specifying what network traffic can reach into -and out of- your Virtual Machine (VM). By default a VM brought up in the Midgard Cloud can reach out to the world via the network, but the world can’t reach in.</p>
+<p>You need to specify any network traffic to be allowed to reach the VM via the Rules in a Security Group. Security groups can be applied to VMs at launch and can be applied or removed at any other time in the VMs life.</p>
+<h2 id="inspecting-your-security-groups">Inspecting your Security Groups</h2>
+<ol>
+<li>Logon to your Midgard Dashboard</li>
+<li>Navigate to <code>Project / Network / Security Groups</code> in the navigation panel on the left hand side.</li>
+<li>You will now see a list of the Security Groups that are available in your project.</li>
+<li>Click the <code>Manage Rules</code> option in the Action Menu button on the <code>default</code> group.</li>
+<li>A list of <code>Rules</code> is displayed that are part of this Security Group.</li>
+</ol>
+<h2 id="creating-a-security-group">Creating a Security Group</h2>
+<ol>
+<li>Logon to your Midgard Dashboard</li>
+<li>Navigate to <code>Project / Network / Security Groups</code> in the navigation panel on the left hand side.</li>
+<li>Click the button <code>+ Create Security Group</code>.</li>
+<li>Give your Security Group a meaningful Name and optionally a Description. For the purpose of this tutorial we recommend the name <code>SSH</code>.</li>
+<li>Click Create Security Group to finalise this step. You have now created a Security Group and you are ready to configure it with the right Rules.</li>
+</ol>
+<h2 id="adding-ssh-access">Adding <code>ssh</code> Access</h2>
+<ol>
+<li>
+<p>After clicking the create security group button above, you will automatically see the rules for this group. Two Egress rules should be visible.</p>
+<p>Egress means traffic/data sent out of our virtual machine. What we are concerned with, is who is trying to come in. So to allow our own connections, we need to add an Ingress rule for SSH access.</p>
+</li>
+<li>
+<p>To add the SSH rule, click the <code>+ Add Rule</code> button.</p>
+</li>
+<li>In the Add Rule dialog, select the Rule SSH in the <code>Rule</code> selector.</li>
+<li>Click the Add button to complete this step. You have created a Security Group and configured it with the SSH rule.</li>
+</ol>
+<h2 id="applying-security-groups">Applying Security Groups</h2>
+<p>Security Groups are applied to Virtual Machines to allow them to receive network traffic. Typically you apply Security Groups when you Launch your VM, but you can add security groups to your running VM at a later time too; Or indeed remove security groups from your VMs.</p>
+<h3 id="applying-a-security-group-at-launch">Applying a Security Group at Launch</h3>
+<p>When you launch an instance using the Midgard dashboard, the Launch Instance dialog will guide you and will ask you to apply one or more security groups. You will need to have created those group before the following the launch dialog.</p>
+<p>If you’re following the Cloud Starter: you’ll learn about Launching and the Dialog in <a href="launching-instances.md">Launching Virtual Machines</a>.</p>
+<h3 id="applying-a-security-group-on-a-running-instance">Applying a security group on a running instance</h3>
+<p>If an instance is already running you can add security groups to the running instance to make it respond to additional network traffic, or remove security groups when they’re no longer required. You do this using the option <code>Edit Security Groups</code> in the <code>Action</code> button menu for your instance.</p>
+<p>If you’re following the Cloud Starter: you’ll learn about more about Changing things on your instance in <a href="changing-instances.md">Rebooting, Deleting, Rebuilding, Resizing</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../00-intro/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02-keypairs/" class="btn btn-neutral float-right" title="Key Pairs">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../00-intro/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../02-keypairs/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

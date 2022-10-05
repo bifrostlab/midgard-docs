@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Introduction to Cloud Computing - Midgard Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Introduction to Cloud Computing";
+        var mkdocs_page_input_path = "intro-to-cloud.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Midgard Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to Midgard</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../access-the-lab/">Accessing the Lab</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Introduction to Cloud Computing</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-the-midgard-cloud">What is the Midgard Cloud?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-words">Key Words</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#operation-system">Operation System</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Cloud starter</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../cloud-starter/00-intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cloud-starter/01-security-groups/">Security Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cloud-starter/02-keypairs/">Key Pairs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cloud-starter/03-launching-vms/">Launching Instances</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Midgard Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Introduction to Cloud Computing</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="introduction-to-cloud-computing">Introduction to Cloud Computing</h1>
+<p>This section contains important pre-reading if you are completely new to <em>Cloud Computing</em>. Understanding this information, it will make the instructions in <a href="cloud-starter/intro.md">Cloud Starter</a> easier to follow.</p>
+<h2 id="what-is-the-midgard-cloud">What is the Midgard Cloud?</h2>
+<p>The Midgard Cloud is a way of accessing more powerful computing resources for training and development purpose, where you use your own computer as the controls &amp; access point. You can request on-demand delivery of IT resources instead of buying, owning, and maintaining physical data centers and servers. </p>
+<p>This service from VAIT will allow to focus on delivering your learning projects at no cost and familiarise yourself with managing cloud infrastructure for DevOps career progression.</p>
+<h2 id="key-words">Key Words</h2>
+<p>There are some key words you should know, which will help make your learning experience much easier.</p>
+<ul>
+<li><strong>Virtual Machine/Instance</strong>: a term used to describe your cloud computer.</li>
+<li><strong>Availability Zone:</strong> this is the physical data centre location where an instance resides. At the time of writing, there is only 1 availability zone: <code>nova</code>.</li>
+<li><strong>Flavor:</strong> a flavor prescribes the size of a collection of virtual machine components, such as memory and CPU. You can’t select the size of these components individually, but select a flavour type (eg: <code>small</code>, <code>medium</code>, <code>large</code>) which predefines the size of each component appropriately.</li>
+<li><strong>Image:</strong> a file that contains an operating system, which is added to a blank instance.</li>
+<li><strong>SSH:</strong> This is short for Secure Shell. It is a way to setup an encrypted (secure) connection between your computer and the cloud computer, usually via the command line.</li>
+</ul>
+<h2 id="operation-system">Operation System</h2>
+<p>Just like your standard computer, your Cloud computer has an Operating System, this being Linux, with a number of distributions (a.k.a versions) available. At the moment, we support 2 main OS Distro: <strong>Ubuntu</strong> and <strong>AlmaLinux</strong>.</p>
+<p>This is important to understand, so you know how to find instructions and/or troubleshoot problems you have. For example, you may wish to install a particular package or software on your Cloud Computer. To do this you would search ‘How to install [insert package name] on Linux’, which should (hopefully!) lead to the instructions you need.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../access-the-lab/" class="btn btn-neutral float-left" title="Accessing the Lab"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cloud-starter/00-intro/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../access-the-lab/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../cloud-starter/00-intro/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

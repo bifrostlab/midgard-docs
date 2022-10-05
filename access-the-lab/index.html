@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Accessing the Lab - Midgard Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Accessing the Lab";
+        var mkdocs_page_input_path = "access-the-lab.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Midgard Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to Midgard</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Accessing the Lab</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#setup-cloudflare-warp-client">Setup Cloudflare WARP client</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#download-and-install-warp-client">Download and Install WARP Client</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#join-the-lab-zero-trust-network">Join the lab Zero Trust network</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#accessing-the-dashboard">Accessing the dashboard</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro-to-cloud/">Introduction to Cloud Computing</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Cloud starter</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../cloud-starter/00-intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cloud-starter/01-security-groups/">Security Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cloud-starter/02-keypairs/">Key Pairs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cloud-starter/03-launching-vms/">Launching Instances</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Midgard Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Accessing the Lab</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="accessing-the-lab">Accessing the Lab</h1>
+<p>Once your access has been approved, you will receive an invitation to join <em>Bifrostlab</em> organisation on Github.</p>
+<h2 id="setup-cloudflare-warp-client">Setup Cloudflare WARP client</h2>
+<p>Access to the lab is tunnelled through Cloudflare Zero Trust network.</p>
+<h3 id="download-and-install-warp-client">Download and Install WARP Client</h3>
+<p>Download and install the WARP Client following the guide at:</p>
+<p><a href="https://developers.cloudflare.com/warp-client/get-started/">https://developers.cloudflare.com/warp-client/get-started/</a></p>
+<h3 id="join-the-lab-zero-trust-network">Join the lab Zero Trust network</h3>
+<p>After installing the WARP Client. Open up the WARP app and join into the lab zero trust network:</p>
+<ol>
+<li>Select the WARP app icon.</li>
+<li>Select the <strong>cog icon</strong> &gt; <strong>Preferences</strong>.</li>
+<li>Select <strong>Account</strong> &gt; <strong>Login with Cloudflare Zero Trust</strong>.</li>
+<li>Accept usage condition and proceed.</li>
+<li>Enter your team name: <code>nqngo.cloudflareaccess.com</code></li>
+<li>Sign in with: <strong>GitHub</strong>.</li>
+<li>Select team: <strong>Bifrostlab</strong>. (<em>Note: If you select the wrong team, your access will be blocked. Ping the cloud admin to remove you from the backend.</em>)</li>
+<li>Allow your browser to Open WARP Client.</li>
+</ol>
+<p>Voila! You are now inside the lab Cloudflare tunnel.</p>
+<h2 id="accessing-the-dashboard">Accessing the dashboard</h2>
+<p>You are now able to access the dashboard at: <a href="http://midgard.lab.nqngo.com">http://midgard.lab.nqngo.com</a>.</p>
+<p>Login with your provided credentials. Whilst the provided password is randomly generated, it is highly suggested that you reset and change the password in the dashboard.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Welcome to Midgard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../intro-to-cloud/" class="btn btn-neutral float-right" title="Introduction to Cloud Computing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../intro-to-cloud/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
